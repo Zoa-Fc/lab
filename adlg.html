@@ -1,0 +1,43 @@
+
+<style>
+ body {
+            margin: 0;
+            padding: 0;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            background-color: #ffffff;
+        }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Login</h1>
+        
+         <form style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px;">
+    <label>Username</label>
+    <input type="text" id="admin-username" required>
+
+    <label>Password</label>
+    <input type="password" id="admin-password" required>
+
+    <button type="button" class="action-btn" onclick="loginAdmin()" style="margin-top: 10px;">Login</button>
+</form>
+
+<p id="error-message" style="color: red; font-size: 14px; margin-top: 10px; text-align: center;"></p>
+     </form>
+    </div>
+    
+<script src="backend/adlg.js"></script>    
+</body>
+</html>

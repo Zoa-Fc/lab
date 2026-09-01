@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Panel</h1>
+
+        <button class="action-btn" onclick="toggleUserList()">List Users</button>
+
+        <div class="command-box">
+            <input type="text" id="command-input" placeholder="Enter command...">
+            <button class="action-btn" onclick="executeCommand()">Run</button>
+        </div>
+        
+        
+        <div class="cmd list">
+            
+            <p>
+                1. shutdown --to shutdown server
+            </p>
+            <p>
+                2. start --to startup server
+            </p>
+            
+            <p>
+                3. rm -a usr --to remove all user
+            </p>
+            
+        </div>
+
+        <p id="command-output"></p>
+
+        <div id="user-container" style="display: none;">
+            <ul id="user-list"></ul>
+        </div>
+    </div>
+
+    <script src="backend/admin.js"></script>
+</body>
+</html>
