@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="pf.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Profile Settings</h1>
+
+        <form id="profile-form" style="margin-top: 20px; width: 100%; max-width: 320px;">
+            <div class="avatar-preview" id="avatar-display">?</div>
+
+            <label>Display Name:</label>
+            <input type="text" id="display-name-input" placeholder="Enter your name">
+
+            <label style="margin-top: 10px; display: block;">Secret info:</label>
+            <textarea id="bio-input" placeholder="Don't leak this information" style="width: 100%; height: 60px;"></textarea>
+
+            <button type="button" class="action-btn" onclick="saveProfile()" style="width: 100%; margin-top: 15px;">Save Profile</button>
+        </form>
+
+        <p id="profile-status" style="margin-top: 10px; font-weight: bold;"></p>
+
+        <!-- Profile Actions -->
+       
+            <button class="ban-btn" onclick="logout()" style="width: 100%;">Logout</button>
+            
+            <div class="bottom-actions">
+                <button class="back-circle-btn" onclick="window.location.href='index.html'">👈</button>
+            </div>
+            
+            
+    </div>
+
+    <script src="pf.js"></script>
+</body>
+</html>

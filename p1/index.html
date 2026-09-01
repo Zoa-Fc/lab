@@ -1,0 +1,113 @@
+
+<script>
+    if (localStorage.getItem("serverShutdown") === "true") {
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>Server is down</h1>";
+        });
+    }
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <style>
+        .messenger-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .user-card-btn {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 8px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-card-btn:hover {
+            background-color: #e9ecef;
+        }
+
+        .chat-box {
+            display: none;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .message-area {
+            height: 220px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: #ffffff;
+            margin-bottom: 10px;
+        }
+
+       .profile-footer {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .profile-circle-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15)
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        
+        <div class="messenger-container">
+            <h1 id="user-heading" style="margin-bottom: 15px; font-size: 24px;">Messenger</h1>
+
+            <h3 style="align-self: flex-start; margin-left: 5px;">Select a User to Chat</h3>
+            <div id="user-dm-list" style="width: 100%;"></div>
+
+            <!-- Dynamic Chat Window -->
+            <div id="chat-window" class="chat-box">
+                <h4 id="chat-with-title" style="margin-bottom: 8px;"></h4>
+                <div id="message-list" class="message-area"></div>
+                <textarea id="message-input" placeholder="Type a message..." style="width: 100%; height: 50px; margin-bottom: 8px; box-sizing: border-box;"></textarea>
+                <button class="action-btn" onclick="sendMessage()" style="width: 100%;">Send</button>
+            </div>
+
+            <!-- Circle Profile Button Below Message Area -->
+            <button class="profile-circle-btn" id="profile-btn" onclick="window.location.href='pf.html'">?</button>
+        </div>
+
+    </div>
+
+ 
+    <script src="p1.js"></script>
+</body>
+</html>
