@@ -1,0 +1,64 @@
+/* Center the page layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; /* Moves everything a bit lower */
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Centered heading */
+.login {
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+/* Vertical layout for inputs & submit button */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 280px;
+}
+
+/* Larger inputs with centered placeholders */
+input {
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* Centered red submit button */
+button[type="submit"] {
+    text-align: center;
+    align-self: center;
+    background-color: red;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 40%;
+    
+}
+
+/* Create Account link on the right side with larger blue text */
+a {
+    display: block;
+    width: 280px;
+    text-align: center;
+    color: blue;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 0px;
+    font-weight: bold;
+}
